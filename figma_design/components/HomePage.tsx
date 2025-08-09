@@ -94,8 +94,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
           </div>
           
           <h1 className="text-5xl md:text-8xl font-bold mb-8 text-glow-cream animate-fade-in-up animate-delay-200">
-            Advancing Intelligence<br />
-            <span className="gradient-cream bg-clip-text text-transparent shimmer">Through Innovation</span>
+            Driving Innovation<br />
+            <span className="gradient-cream bg-clip-text text-transparent shimmer"> Empowering Intelligence</span>
           </h1>
           
           <p className="text-xl md:text-3xl mb-12 text-cream/90 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-300">
