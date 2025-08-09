@@ -129,7 +129,7 @@ export function EventsPage() {
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-8 text-glow-cream animate-fade-in-up">Events</h1>
           <p className="text-xl text-cream/90 leading-relaxed animate-fade-in-up animate-delay-100">
-            Join us for cutting-edge workshops, conferences, and networking opportunities
+            Connect, learn, and grow through workshops, conferences, and networking.
           </p>
         </div>
       </section>
@@ -140,7 +140,7 @@ export function EventsPage() {
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Upcoming Events</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Don't miss these exciting opportunities to learn and network
+              Unlock new ways to learn and advance your career.
             </p>
           </div>
 
@@ -216,7 +216,7 @@ export function EventsPage() {
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Past Events</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Celebrating our successful events and achievements
+              Tracing the story of our achievements and breakthroughs.
             </p>
           </div>
 
@@ -273,7 +273,7 @@ export function EventsPage() {
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Event Categories</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              We organize diverse events to cater to different interests and skill levels
+              Curating events that inspire and engage participants at every level.
             </p>
           </div>
 
