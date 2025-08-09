@@ -94,12 +94,12 @@ export function HomePage({ onPageChange }: HomePageProps) {
           </div>
           
           <h1 className="text-5xl md:text-8xl font-bold mb-8 text-glow-cream animate-fade-in-up animate-delay-200">
-            Driving Innovationnn<br />
+            Driving Innovation.<br />
             <span className="gradient-cream bg-clip-text text-transparent shimmer"> Empowering Intelligence</span>
           </h1>
           
           <p className="text-xl md:text-3xl mb-12 text-cream/90 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-300">
-            Join the future of computational intelligence at <span className="text-accent text-glow">Your College Name</span>
+             Step into the world of computational intelligence<span className="text-accent text-glow"> — only at REC CIS!</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up animate-delay-400">
@@ -145,7 +145,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Our Achievements</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Celebrating excellence in computational intelligence</p>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Chasing Big Ideas. Making Bigger Moves.</p>
           </div>
           
           <div className="relative overflow-hidden glass-intense rounded-2xl glow-purple shadow-purple-xl">
@@ -190,8 +190,10 @@ export function HomePage({ onPageChange }: HomePageProps) {
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-glow-cream">What is IEEE CIS?</h2>
               <p className="text-xl mb-8 text-muted-foreground leading-relaxed">
                 The IEEE Computational Intelligence Society (CIS) is a professional society of the Institute of 
-                Electrical and Electronics Engineers (IEEE) focused on the theory, design, application, and 
-                development of biologically and linguistically motivated computational paradigms.
+                Electrical and Electronics Engineers is where tech gets smarter. We’re all about creating systems that 
+                can think, learn, and adapt, inspired by how humans and nature work. From AIML to robotics, IEEE CIS 
+                bridges the gap between theory and real-world impact.
+                It’s not just a society — it’s a community shaping the future, where innovation meets impact.
               </p>
               
               <div className="space-y-6 mb-10">
@@ -237,12 +239,12 @@ export function HomePage({ onPageChange }: HomePageProps) {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-glow-cream animate-fade-in-up">Global Impact</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-100">
-            IEEE CIS spans the globe with over 6,000 members worldwide, fostering collaboration 
-            between academia and industry to advance computational intelligence research and applications.
+            Over 486,000 members across continents, IEEE CIS is a powerhouse connecting brilliant minds from universities, research labs,
+            and industry leaders to push the boundaries of computational intelligence.
           </p>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
-            Our society publishes leading journals, organizes premier conferences, and supports 
-            educational initiatives that shape the future of artificial intelligence and machine learning.
+            We drive the future of AI and machine learning through world-class journals, game-changing conferences, and 
+            forward-thinking educational programs — turning today’s ideas into tomorrow’s breakthroughs.
           </p>
         </div>
       </section>
@@ -252,7 +254,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Our Community</h2>
-            <p className="text-xl text-muted-foreground">Meet the passionate minds driving innovation</p>
+            <p className="text-xl text-muted-foreground">A hub of dreamers, doers, and disruptors.</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -303,7 +305,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
           <div className="w-20 h-20 gradient-purple-glow rounded-full flex items-center justify-center mx-auto mb-8 glow-purple-intense animate-float">
             <Users className="h-10 w-10 text-accent" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-glow-cream animate-fade-in-up">Ready to Join the Future?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-glow-cream animate-fade-in-up">Your Future in AI Starts Here.</h2>
           <p className="text-xl mb-12 text-cream/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animate-delay-100">
             Connect with like-minded innovators, access cutting-edge resources, 
             and be part of groundbreaking research in computational intelligence.
