@@ -157,7 +157,7 @@ export default function App() {
                     { label: 'About Us', page: 'about' },
                     { label: 'Events', page: 'events' },
                     { label: 'Join Us', page: 'join' }
-                  ].map((link, index) => (
+                  ].map((link) => (
                     <button 
                       key={link.page}
                       onClick={() => setCurrentPage(link.page)} 

@@ -6,7 +6,7 @@ import { Users, Lock, Eye, EyeOff } from 'lucide-react';
 interface LoginDialogProps {
 	open: boolean;
 	onClose: () => void;
-	onLogin: (isAdmin: boolean) => void;
+	onLogin: () => void;
 }
 
 const LoginDialog = ({ open, onClose, onLogin }: LoginDialogProps) => {
@@ -28,7 +28,7 @@ const LoginDialog = ({ open, onClose, onLogin }: LoginDialogProps) => {
 		setError("");
 
 		if (credentials.username === validCredentials.username && credentials.password === validCredentials.password) {
-			onLogin(true);
+			onLogin();
 			setCredentials({ username: "", password: "" });
 		} else {
 			setError("Invalid credentials. Please use your IEEE CIS member credentials.");
