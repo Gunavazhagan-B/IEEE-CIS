@@ -143,7 +143,6 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 
-	// Memoized filtered events
 	const filteredEvents = useMemo(() => {
 		if (!selectedCategory) return events;
 		return events.filter(
@@ -178,7 +177,7 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 	}, []);
 
 	const handleDeleteEvent = async (eventId: number) => {
-		// Optimistic update
+
 		const originalEvents = events;
 		setEvents(events.filter((event) => event.id !== eventId));
 
@@ -195,7 +194,7 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 			}
 		} catch (error) {
 			console.error("Error deleting event:", error);
-			// Revert optimistic update on error
+
 			setEvents(originalEvents);
 			setError("Failed to delete event. Please try again.");
 		}
@@ -242,7 +241,7 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 
 	return (
 		<div className="min-h-screen">
-			{/* Error Display */}
+
 			{error && (
 				<div className="bg-red-500/10 border border-red-500/20 text-red-400 p-4 m-4 rounded-lg">
 					{error}
@@ -279,7 +278,6 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 				</div>
 			</section>
 
-			{/* Event Categories */}
 			<section className="py-24 px-4">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-16 animate-fade-in-up">
@@ -351,7 +349,7 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 								onClick={() => setSelectedCategory(null)}
 								className="border-accent/30 text-accent hover:bg-accent/10"
 							>
-								Show All Events
+								Show All Events 
 							</Button>
 						)}
 					</div>
@@ -369,7 +367,7 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 											<img
 												src={`http://localhost:5000/images/${event.image}`}
 												alt={event.title}
-												className="w-full h-full object-cover rounded-lg"
+												className="h-full object-cover rounded-lg"
 												loading="lazy"
 											/>
 										) : null}
