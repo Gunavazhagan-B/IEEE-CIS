@@ -105,7 +105,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-8 text-glow-cream animate-fade-in-up">About IEEE CIS</h1>
           <p className="text-xl text-cream/90 leading-relaxed animate-fade-in-up animate-delay-100">
-            Advancing the theory, design, and application of computational intelligence
+            Where AI gets its brains and ideas get their glow-up.
           </p>
         </div>
       </section>
@@ -176,8 +176,8 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               </CardHeader>
               <CardContent className="space-y-6">
                 {[
-                  "Contributing to IEEE's global network of 420,000+ members",
-                  "Publishing research in top-tier international journals",
+                  "Contributing to IEEE's global network of 420,000+ innovators worldwide",
+                  "Publishing research papers in top-tier international journals",
                   "Collaborating with researchers from 160+ countries",
                   "Setting standards for AI and computational intelligence"
                 ].map((item, index) => (
@@ -200,10 +200,10 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               </CardHeader>
               <CardContent className="space-y-6">
                 {[
-                  "Training 500+ students annually in AI and ML",
+                  "Empowering 500+ students every year with hands-on AI & ML skills",
                   "Partnering with local tech companies for internships",
-                  "Organizing community outreach programs",
-                  "Supporting local entrepreneurship in AI startups"
+                  "Hosting workshops and hackathons to spark AI creativity locally",
+                  "Supporting homegrown innovation by supporting AI-driven startups"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-4 p-3 glass rounded-lg hover-glow transition-all duration-300">
                     <CheckCircle className="h-6 w-6 text-accent mt-0.5 flex-shrink-0 glow-purple" />
@@ -222,7 +222,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Core Activities</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Driving innovation through diverse programs and initiatives
+              Fueling innovation through diverse programs and initiatives.
             </p>
           </div>
 
@@ -251,9 +251,9 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
         <div className="absolute inset-0 gradient-purple-glow opacity-10"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Meet Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">The Minds Behind the Mission</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Passionate leaders driving our mission forward
+              Where innovation gets its human touch.
             </p>
           </div>
 
@@ -319,9 +319,9 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
             <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-semibold mb-4 text-glow-cream">Our Amazing Team</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-glow-cream">Meet the crew</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Together, we're building the future of computational intelligence
+                {/*Together, we're building the future of computational intelligence */}
               </p>
             </CardContent>
           </Card>
@@ -334,7 +334,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">Membership Benefits</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Join us and unlock exclusive opportunities for growth and learning
+              Sign up and become part of a thriving community of innovators.
             </p>
           </div>
 
@@ -362,7 +362,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
                   Become a Member
                 </Button>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ready to join our community? Click above to start your journey with IEEE CIS.
+                  Join us and start your IEEE CIS journey today!
                 </p>
               </div>
             </div>
