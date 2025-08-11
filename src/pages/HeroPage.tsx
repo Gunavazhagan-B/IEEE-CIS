@@ -95,23 +95,23 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 		},
 	];
 
-	const communityItems = [
-		{
-			title: "Annual Conference 2023",
-			description: "Our team presenting cutting-edge research",
-			image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop",
-		},
-		{
-			title: "AI Workshop",
-			description: "Hands-on learning with industry experts",
-			image: "https://images.unsplash.com/photo-1543269664-7eef42226a21?w=400&h=300&fit=crop",
-		},
-		{
-			title: "Core Team Meeting",
-			description: "Planning the future of our chapter",
-			image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=400&h=300&fit=crop",
-		},
-	];
+	// const communityItems = [
+	// 	{
+	// 		title: "Annual Conference 2023",
+	// 		description: "Our team presenting cutting-edge research",
+	// 		image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop",
+	// 	},
+	// 	{
+	// 		title: "AI Workshop",
+	// 		description: "Hands-on learning with industry experts",
+	// 		image: "https://images.unsplash.com/photo-1543269664-7eef42226a21?w=400&h=300&fit=crop",
+	// 	},
+	// 	{
+	// 		title: "Core Team Meeting",
+	// 		description: "Planning the future of our chapter",
+	// 		image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=400&h=300&fit=crop",
+	// 	},
+	// ];
 
 	useEffect(() => {
 		const timer = setInterval(() => {
@@ -404,7 +404,7 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 			</section>
 
 			{/* Our Community Section */}
-			<section className="py-24 px-4">
+			{/* <section className="py-24 px-4">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-16 animate-fade-in-up">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">
@@ -442,7 +442,7 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 						))}
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* Contact Section */}
 			<section className="py-24 px-4">

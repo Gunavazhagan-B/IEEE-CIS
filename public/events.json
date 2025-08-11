@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1754143705492,
+    "title": "AI Workshop Series 2",
+    "description": "Comprehensive workshop on machine learning fundamentals and neural networks",
+    "image": "llm_tuned.png",
+    "link": "https://example.com/register/ai-workshop",
+    "type": "Workshop"
+  },
+  {
+    "id": 1754149231551,
+    "title": "Data Science Bootcamp",
+    "description": "Intensive bootcamp covering data analysis, visualization, and predictive modeling",
+    "image": "rewired.png",
+    "link": "https://example.com/register/data-science",
+    "type": "Workshop"
+  }
+]
