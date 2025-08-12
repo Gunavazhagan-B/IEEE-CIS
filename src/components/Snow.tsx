@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import React, { useRef, useEffect } from 'react';
 
 interface SnowProps {
@@ -63,6 +64,7 @@ const Snow: React.FC<SnowProps> = ({ mouseX }) => {
     const height = lastHeight.current;
 
     function draw() {
+      if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
       // Mouse influence: -1 (left) to 1 (right)
       const mouseInfluence = ((mouseX / width) - 0.5) * 2;
