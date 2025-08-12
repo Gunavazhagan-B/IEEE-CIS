@@ -2,7 +2,7 @@
     {
         "title":"Datavizzx",
         "description":"The Datavizzx Workshop was organized to introduce participants to the fundamentals of data visualization and analytics using Microsoft Power BI.",
-        "image":"cloudScape.png",
+        "image":"DataVizzx.png",
         "date":"21-4-2025",
         "type":"Workshop",
         "faculty":"Vijay K (faculty Coordinator)"
@@ -18,7 +18,7 @@
     {
         "title":"CLOUDSCAPE",
         "description":"CLOUDSCAPE AWS Cloud Workshop offered hands-on training in cloud architecture, services, IAM, serverless deployment, and cost optimization.",
-        "image":"DataVizzx.png",
+        "image":"cloudScape.png",
         "date":"12.02.2025",
         "type":"workshop",
         "faculty":"Vijay K (faculty Coordinator)"
