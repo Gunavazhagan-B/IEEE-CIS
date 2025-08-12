@@ -1,16 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
-import { Users, Award, Brain, Target, Globe, Linkedin, Github, CheckCircle, Zap } from 'lucide-react';
+import { Users, Award, Brain, Target, Globe, Linkedin, Github, CheckCircle } from 'lucide-react';
 import type { MemberGroups } from '../types';
 import membersData from "./members.json";
 import { Instagram } from 'lucide-react';
 
-interface AboutPageProps {
-  onPageChange?: (page: string) => void;
-}
 
-const AboutPage = ({ onPageChange }: AboutPageProps) => {
+const AboutPage = () => {
 	const memberGroups: MemberGroups = membersData; 
     // const placeholderImage = "https://via.placeholder.com/150";
     
@@ -145,9 +141,12 @@ const AboutPage = ({ onPageChange }: AboutPageProps) => {
 							</CardHeader>
 							<CardContent>
 								<p className="text-lg text-muted-foreground leading-relaxed">
-									Advance the theory, design, and application of biologically and linguistically 
-                  motivated computational paradigms including neural networks, connectionist systems, 
-                  genetic algorithms, evolutionary programming, fuzzy systems, and hybrid intelligent systems.
+									Advance the theory, design, and application
+									of biologically and linguistically motivated
+									computational paradigms including neural
+									networks, connectionist systems, genetic
+									algorithms, evolutionary programming, fuzzy
+									systems, and hybrid intelligent systems.
 								</p>
 							</CardContent>
 						</Card>
@@ -338,8 +337,8 @@ const AboutPage = ({ onPageChange }: AboutPageProps) => {
 												<div className="relative mb-6">
 													<div className="absolute inset-0 gradient-purple-glow rounded-full glow-purple opacity-50 animate-pulse-glow"></div>
 													{member.Photo === "" && (
-                                                        <img
-                                                            src="./deafult_pfp.jpg"
+														<img
+															src="./deafult_pfp.jpg"
 															className="w-28 h-28 rounded-full mx-auto object-cover relative z-10 border-2 border-accent/30 bg-gray"
 														/>
 													)}
@@ -462,14 +461,13 @@ const AboutPage = ({ onPageChange }: AboutPageProps) => {
 							</div>
 
 							<div className="space-y-6">
-								<Button
-									size="lg"
-									className="gradient-purple-glow hover:glow-purple-intense transition-all duration-500 hover:scale-105 px-8 py-4 text-lg w-full sm:w-auto neon-border"
-									onClick={() => onPageChange?.("join")}
+								<a
+									className="gradient-purple-glow hover:glow-purple-intense transition-all duration-500 hover:scale-105 px-8 py-4 text-lg w-full sm:w-auto neon-border rounded-lg"
+									href="https://www.ieee.org/membership/join"
 								>
-									<Zap className="mr-2 h-5 w-5" />
+									{/* <Zap className="mr-2 h-5 w-5" /> */}
 									Become a Member
-								</Button>
+								</a>
 								<p className="text-muted-foreground leading-relaxed">
 									Ready to join our community? Click above to
 									start your journey with IEEE CIS.
