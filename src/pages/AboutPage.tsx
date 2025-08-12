@@ -116,9 +116,7 @@ const AboutPage = () => {
 							IEEE Computational Intelligence Society
 						</h1>
 						<p className="text-xl text-cream/90 leading-relaxed max-w-3xl mx-auto">
-							A dynamic community of students passionate about
-							artificial intelligence, machine learning, and
-							intelligent systems.
+							Where AI gets it's brains and ideas get their glow-up 
 						</p>
 					</div>
 				</div>

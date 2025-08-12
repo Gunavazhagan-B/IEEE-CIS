@@ -44,11 +44,19 @@
     "Web Dev": [
         {
             "Role": "Web Dev Team",
-            "Name": "Tarun Aanand SG",
+            "Name": "Tarun Aanand S G",
             "LinkedIn ID": "https://www.linkedin.com/in/tarun-aanand-s-g-12092b2a2/",
             "Insta ID": "tarun_aanand",
             "Github": "https://github.com/TarunAanand",
             "Photo": "/images/TARUN AANAND S G.jpg"
+        },
+        {
+            "Role": "Web Dev Team",
+            "Name": "Ashikhashree Karthikeyan",
+            "LinkedIn ID": "https://www.linkedin.com/in/ashikha-shree-175665287/",
+            "Insta ID": "blythe._.wexler",
+            "Github": "https://github.com/Ashikhashree",
+            "Photo": "/images/ASHIKHASHREE.jpg"
         },
         {
             "Role": "Web Dev Team",
@@ -65,14 +73,6 @@
             "Insta ID": "",
             "Github": "https://github.com/Gunavazhagan-B",
             "Photo": "/images/GUNAVAZHAGAN B.jpg"
-        },
-        {
-            "Role": "Web Dev Team",
-            "Name": "AshikhaShree",
-            "LinkedIn ID": "https://www.linkedin.com/in/ashikha-shree-175665287/",
-            "Insta ID": "blythe._.wexler",
-            "Github": "https://github.com/Ashikhashree",
-            "Photo": "/images/ASHIKHASHREE.jpg"
         }
     ],
     "Machine Learning": [

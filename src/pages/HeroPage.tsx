@@ -1,24 +1,24 @@
 import { useEffect, useRef, useState } from "react";
-import { Button } from "../components/ui/button";
+// import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
+// import { Badge } from "../components/ui/badge";  
 import {
 	// Calendar,
 	Users,
 	Award,
-	ChevronRight,
+	// ChevronRight,
 	// Sparkles,
 	Zap,
 	Brain,
 } from "lucide-react";
 
-interface HeroPageProps {
-	onPageChange?: (page: string) => void;
-}
+// interface HeroPageProps {
+// 	onPageChange?: (page: string) => void;
+// }
 
 type VantaInstance = { destroy: () => void } | null;
 
-const HeroPage = ({ onPageChange }: HeroPageProps) => {
+const HeroPage = () => {
 	const [currentAchievement, setCurrentAchievement] = useState(0);
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -45,8 +45,8 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 					minHeight: 200.0,
 					minWidth: 200.0,
 					scale: 0.5,
-					scaleMobile: 1.0,
-					size: 1.0,
+					scaleMobile: 0.5,
+					size: 1.5,
 					color: 0x8b5cf6, // purple lines
 					backgroundAlpha: 0.0, // keep background transparent so our gradients/glows show
 				});
@@ -273,7 +273,7 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 								inspired by how humans and nature work. From
 								AIML to robotics, IEEE CIS bridges the gap
 								between theory and real-world impact. <br />It's not
-								just a society — it's a community shaping the
+								just a group of techies — it's a society shaping the
 								future, where innovation meets impact.
 							</p>
 							{/* <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -365,12 +365,12 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 									<p className="text-sm text-muted-foreground mb-3">
 										{achievement.description}
 									</p>
-									<Badge
+									{/* <Badge
 										variant="secondary"
 										className="bg-accent/20 text-accent"
 									>
 										{achievement.year}
-									</Badge>
+									</Badge> */}
 								</CardContent>
 							</Card>
 						))}
@@ -387,7 +387,7 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 						Global Impact
 					</h2>
 					<p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-100">
-						Over 486,000 members across continents, IEEE CIS is a powerhouse connecting brilliant minds from universities, research labs, and industry leaders to push the boundaries of computational intelligence.
+						Over 486,000 members across continents, IEEE CIS is a powerhouse connecting brilliant minds from universities, research labs, and industry leaders to push the boundaries of computational intelligence.
 					</p>
 					<p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
 						We drive the future of AI and machine learning through world-class journals, game-changing conferences, and 
@@ -442,15 +442,15 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 				<div className="max-w-4xl mx-auto text-center">
 					<div className="gradient-dark-purple text-cream py-16 px-8 rounded-2xl glow-purple-intense glass-intense shadow-deep animate-fade-in-up">
 						<h2 className="text-4xl md:text-5xl font-bold mb-8 text-glow-cream">
-							Your Future in AI Starts Here.
+							Your Future in AI Starts Here.
 						</h2>
 						<p className="text-xl mb-12 text-cream/90 leading-relaxed max-w-2xl mx-auto">
 							Connect with like-minded innovators, access cutting-edge resources, 
-            and be part of groundbreaking research in computational intelligence.
+            and be part of groundbreaking research in computational intelligence.
 						</p>
 						<p className="text-xl mb-12 text-cream/90 leading-relaxed max-w-2xl mx-auto">
 							Join workshops, participate in global competitions, and collaborate with experts shaping the future of AI.
-Expand your skills, grow your network, and make a lasting impact on technology for humanity
+Expand your skills, grow your network, and make a lasting impact on technology for humanity
 						</p>
 					</div>
 				</div>
