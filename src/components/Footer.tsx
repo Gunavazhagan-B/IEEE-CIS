@@ -34,21 +34,21 @@ const Footer = () => {
 						<div className="space-y-4">
 							<div className="flex items-center p-3 glass rounded-lg hover-glow transition-all duration-300">
 								<span className="mr-3">📧</span>
-								<span className="text-muted-foreground">
-									ieee.cis@rec.edu
-								</span>
+								<a className="text-muted-foreground" href="https://mail.google.com/mail/?view=cm&fs=1&to=ieee.cis@rajalakshmi.edu.in">
+									Email
+								</a>
 							</div>
 							<div className="flex items-center p-3 glass rounded-lg hover-glow transition-all duration-300">
 								<span className="mr-3">🔗</span>
-								<span className="text-muted-foreground">
-									/company/ieee-cis-rec
-								</span>
+								<a className="text-muted-foreground" href="https://linkedin.com/company/ieee-cis-rec">
+									LinkedIn
+								</a>
 							</div>
 							<div className="flex items-center p-3 glass rounded-lg hover-glow transition-all duration-300">
 								<span className="mr-3">📱</span>
-								<span className="text-muted-foreground">
-									@ieee_cis_rec
-								</span>
+								<a className="text-muted-foreground" href="https://instagram.com/ieee_cis_rec ">
+									Instagram
+								</a>
 							</div>
 						</div>
 					</div>

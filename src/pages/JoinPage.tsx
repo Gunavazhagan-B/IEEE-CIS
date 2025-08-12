@@ -12,31 +12,17 @@ const JoinPage = () => {
 						Join IEEE CIS
 					</h1>
 					<p className="text-xl mb-12 text-cream/90 leading-relaxed max-w-2xl mx-auto">
-						Ready to be part of our innovative community? Contact us
-						to learn more about membership opportunities and start
-						your journey with computational intelligence.
+						Ready to be part of our innovative society? Join us and
+						start your journey with computational intelligence.
 					</p>
-					<div className="grid md:grid-cols-3 gap-8 text-center">
-						<div className="p-6 glass rounded-lg hover-glow transition-all duration-300">
-							<h3 className="font-semibold mb-3 text-lg text-glow-cream">
-								📧 Email
-							</h3>
-							<p className="text-cream/80">ieee.cis@rec.edu</p>
-						</div>
-						<div className="p-6 glass rounded-lg hover-glow transition-all duration-300">
-							<h3 className="font-semibold mb-3 text-lg text-glow-cream">
-								🔗 LinkedIn
-							</h3>
-							<p className="text-cream/80">
-								/company/ieee-cis-rec
-							</p>
-						</div>
-						<div className="p-6 glass rounded-lg hover-glow transition-all duration-300">
-							<h3 className="font-semibold mb-3 text-lg text-glow-cream">
-								📱 Instagram
-							</h3>
-							<p className="text-cream/80">@ieee_cis_rec</p>
-						</div>
+					<div className="text-center flex justify-center items-center">
+						<a
+							className="gradient-purple-glow hover:glow-purple-intense transition-all duration-500 hover:scale-105 px-8 py-4 text-lg w-full sm:w-auto neon-border rounded-lg"
+							href="https://www.ieee.org/membership/join"
+						>
+							Become a Member
+							{/* <Zap className="mr-2 h-5 w-5" /> */}
+						</a>
 					</div>
 				</div>
 			</div>

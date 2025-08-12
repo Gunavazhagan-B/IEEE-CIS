@@ -30,18 +30,12 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
     <nav className={`glass-intense sticky top-0 z-50 transition-all duration-500 ${
       isScrolled ? 'glow-purple shadow-purple-xl' : ''
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-1.5">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3 animate-slide-in-left">
             <div className="w-10 h-10 flex items-center justify-center">
-              {/* Modern IEEE CIS SVG Logo */}
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="18" fill="#8a5cf6" fillOpacity="0.15"/>
-                <circle cx="20" cy="20" r="12" fill="#8a5cf6"/>
-                <path d="M20 10L24 20L20 30L16 20L20 10Z" fill="#fff"/>
-                <circle cx="20" cy="20" r="3" fill="#e5dcc3"/>
-              </svg>
+              <img src='rec-main-logo.png' alt='logo'></img>
             </div>
             <div>
               <h1 className="text-lg font-semibold text-foreground text-glow-cream">IEEE CIS</h1>

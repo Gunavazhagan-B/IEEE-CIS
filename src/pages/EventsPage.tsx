@@ -4,11 +4,15 @@ import { Button } from "../components/ui/button";
 import {
 	Card,
 	CardContent,
-	CardHeader,
-	CardTitle,
+	// CardHeader,
+	// CardTitle,
 } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-import { Calendar, Users, Clock, ArrowRight, Zap } from "lucide-react";
+import { Calendar, Users, Clock, Zap } from "lucide-react";
+
+import type { PastEvent } from "../types";
+import { PastEvents } from "../components/PastEvents";
+
 
 interface Event {
 	id: number;
@@ -19,89 +23,11 @@ interface Event {
 	type: string;
 }
 
-interface PastEvent {
-	title: string;
-	description: string;
-	image: string;
-	date: string;
-	type: string;
-	highlights: string[];
-}
-
 interface EventCategory {
 	title: string;
 	description: string;
 	icon: React.ReactNode;
 }
-
-const pastEvents: PastEvent[] = [
-	{
-		title: "International Conference on Neural Networks",
-		description:
-			"Successfully hosted our annual international conference with 800+ participants from 25 countries.",
-		image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=250&fit=crop",
-		date: "November 2023",
-		type: "Conference",
-		highlights: [
-			"800+ Participants",
-			"25 Countries",
-			"50+ Research Papers",
-		],
-	},
-	{
-		title: "Hackathon: AI for Social Good",
-		description:
-			"48-hour hackathon focused on developing AI solutions for social challenges and humanitarian causes.",
-		image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=250&fit=crop",
-		date: "October 2023",
-		type: "Hackathon",
-		highlights: ["100+ Participants", "20 Teams", "$10K Prize Pool"],
-	},
-	{
-		title: "Evolutionary Computation Webinar Series",
-		description:
-			"Monthly webinar series featuring world-renowned experts in genetic algorithms and evolutionary programming.",
-		image: "https://images.unsplash.com/photo-1587614385131-b71c92041b9d?w=400&h=250&fit=crop",
-		date: "Sep 2023",
-		type: "Webinar",
-		highlights: ["6 Sessions", "International Speakers", "500+ Attendees"],
-	},
-	{
-		title: "Fuzzy Systems Workshop",
-		description:
-			"Comprehensive workshop on fuzzy logic systems, approximate reasoning, and real-world applications.",
-		image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop",
-		date: "August 2023",
-		type: "Workshop",
-		highlights: [
-			"Hands-on Training",
-			"Industry Cases",
-			"Certificate Program",
-		],
-	},
-	{
-		title: "Student Research Symposium",
-		description:
-			"Showcasing outstanding research projects by undergraduate and graduate students in computational intelligence.",
-		image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=250&fit=crop",
-		date: "July 2023",
-		type: "Symposium",
-		highlights: [
-			"30+ Presentations",
-			"Best Paper Awards",
-			"Industry Judges",
-		],
-	},
-	{
-		title: "Tech Talk: Quantum Computing & AI",
-		description:
-			"Expert talk on the intersection of quantum computing and artificial intelligence by IBM Research.",
-		image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop",
-		date: "June 2023",
-		type: "Tech Talk",
-		highlights: ["IBM Research Speaker", "Q&A Session", "200+ Attendees"],
-	},
-];
 
 const eventCategories: EventCategory[] = [
 	{
@@ -136,6 +62,7 @@ interface EventsPageProps {
 
 const EventsPage = ({ isAdmin }: EventsPageProps) => {
 	const [events, setEvents] = useState<Event[]>([]);
+	const [pastEvents, setPastEvents] = useState<PastEvent[]>([]);
 	const [showAddDialog, setShowAddDialog] = useState(false);
 	const [selectedCategory, setSelectedCategory] = useState<string | null>(
 		null
@@ -143,7 +70,6 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 
-	// Memoized filtered events
 	const filteredEvents = useMemo(() => {
 		if (!selectedCategory) return events;
 		return events.filter(
@@ -157,18 +83,24 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 			try {
 				setLoading(true);
 				setError(null);
-				const response = await fetch("http://localhost:5000/events");
 
-				if (!response.ok) {
-					throw new Error(`HTTP error! status: ${response.status}`);
-				}
+				// const apiResponse = await fetch("http://localhost:5000/events");
+				// if (apiResponse.ok) {
+				// 	const data = await apiResponse.json();
+				// 	setEvents(data);
+				// 	return;
+				// }
 
-				const data = await response.json();
-				console.log(data);
-				setEvents(data);
+				const localResponse = await fetch("/events.json");
+				if (!localResponse.ok)
+					throw new Error("Both backend and local fetch failed");
+
+				const localData = await localResponse.json();
+				setEvents(localData);
+				console.warn("Using fallback local events data");
 			} catch (error) {
 				console.error("Failed to fetch events:", error);
-				setError("Failed to load events. Please try again later.");
+				setError("Failed to load live data. Showing cached events.");
 			} finally {
 				setLoading(false);
 			}
@@ -177,25 +109,32 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 		fetchEvents();
 	}, []);
 
+	useEffect(() => {
+		const fetchPastEvents = async () => {
+			try {
+				const resp = await fetch("/past_event.json");
+				const data = await resp.json();
+				setPastEvents(data);
+			} catch (error) {
+				console.error(error);
+			}
+		};
+		fetchPastEvents();
+	}, []);
+
+	// Delete event (API only - no local fallback)
 	const handleDeleteEvent = async (eventId: number) => {
-		// Optimistic update
-		const originalEvents = events;
+		const originalEvents = [...events];
 		setEvents(events.filter((event) => event.id !== eventId));
 
 		try {
 			const response = await fetch(
 				`http://localhost:5000/delete-event/${eventId}`,
-				{
-					method: "DELETE",
-				}
+				{ method: "DELETE" }
 			);
-
-			if (!response.ok) {
-				throw new Error(`HTTP error! status: ${response.status}`);
-			}
+			if (!response.ok) throw new Error("Delete failed");
 		} catch (error) {
 			console.error("Error deleting event:", error);
-			// Revert optimistic update on error
 			setEvents(originalEvents);
 			setError("Failed to delete event. Please try again.");
 		}
@@ -205,28 +144,24 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 		setSelectedCategory(selectedCategory === category ? null : category);
 	};
 
+	// Add event (API only - assumes backend is available)
 	const handleAddEvent = async (newEvent: Omit<Event, "id">) => {
 		try {
 			const response = await fetch("http://localhost:5000/add-event", {
 				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
+				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(newEvent),
 			});
 
-			if (!response.ok) {
-				throw new Error(`HTTP error! status: ${response.status}`);
-			}
+			if (!response.ok) throw new Error("Add failed");
 
 			const savedEvent = await response.json();
 			setEvents([...events, savedEvent]);
 		} catch (error) {
 			console.error("Error adding event:", error);
-			setError("Failed to add event. Please try again.");
+			setError("Failed to add event. Backend might be unavailable.");
 		}
 	};
-
 	if (loading) {
 		return (
 			<div className="min-h-screen flex items-center justify-center">
@@ -242,7 +177,6 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 
 	return (
 		<div className="min-h-screen">
-			{/* Error Display */}
 			{error && (
 				<div className="bg-red-500/10 border border-red-500/20 text-red-400 p-4 m-4 rounded-lg">
 					{error}
@@ -279,7 +213,6 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 				</div>
 			</section>
 
-			{/* Event Categories */}
 			<section className="py-24 px-4">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-16 animate-fade-in-up">
@@ -367,9 +300,10 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 									<div className="aspect-video bg-gradient-to-br from-purple-900/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
 										{event.image ? (
 											<img
-												src={`http://localhost:5000/images/${event.image}`}
+												// src={`http://localhost:5000/images/${event.image}`}
+												src={event.image}
 												alt={event.title}
-												className="w-full h-full object-cover rounded-lg"
+												className="h-full object-cover rounded-lg"
 												loading="lazy"
 											/>
 										) : null}
@@ -451,76 +385,7 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 			</section>
 
 			{/* Past Events Section */}
-			<section className="py-24 glass-intense px-4 relative overflow-hidden">
-				<div className="absolute inset-0 gradient-purple-glow opacity-10"></div>
-				<div className="max-w-7xl mx-auto relative z-10">
-					<div className="text-center mb-16 animate-fade-in-up">
-						<h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">
-							Past Events
-						</h2>
-						<p className="text-xl text-muted-foreground leading-relaxed">
-							Celebrating our successful events and achievements
-						</p>
-					</div>
-
-					<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{pastEvents.map((event, index) => (
-							<Card
-								key={index}
-								className="overflow-hidden glass border-accent/20 hover-glow hover-scale transition-all duration-500 animate-fade-in-up"
-								style={{ animationDelay: `${index * 0.1}s` }}
-							>
-								<div className="relative">
-									<img
-										src={event.image}
-										alt={event.title}
-										className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
-										loading="lazy"
-									/>
-									<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-								</div>
-								<CardHeader>
-									<div className="flex items-center justify-between mb-3">
-										<Badge
-											variant="outline"
-											className="border-accent text-accent glow-purple"
-										>
-											{event.type}
-										</Badge>
-										<span className="text-sm text-muted-foreground">
-											{event.date}
-										</span>
-									</div>
-									<CardTitle className="text-xl text-glow-cream">
-										{event.title}
-									</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<p className="text-muted-foreground mb-6 leading-relaxed">
-										{event.description}
-									</p>
-
-									<div className="space-y-3">
-										{event.highlights.map(
-											(highlight, idx) => (
-												<div
-													key={idx}
-													className="flex items-center p-2 glass rounded-lg"
-												>
-													<ArrowRight className="h-4 w-4 text-accent mr-3 flex-shrink-0 glow-purple" />
-													<span className="text-sm text-muted-foreground">
-														{highlight}
-													</span>
-												</div>
-											)
-										)}
-									</div>
-								</CardContent>
-							</Card>
-						))}
-					</div>
-				</div>
-			</section>
+			<PastEvents pastEvents={pastEvents} />
 
 			{/* CTA Section */}
 			<section className="py-24 px-4">
@@ -535,15 +400,15 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 							latest updates.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-							<Button className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 neon-border px-8 py-3 text-lg">
+							<a className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 neon-border px-8 py-3 text-lg " href="https://cis.ieee.org/publications/newsletter">
 								Subscribe to Newsletter
-							</Button>
-							<Button
+							</a>
+							{/* <Button
 								variant="outline"
 								className="border-accent/30 text-accent hover:bg-accent/10 transition-all duration-300 hover:scale-105 px-8 py-3 text-lg"
 							>
 								Follow Us
-							</Button>
+							</Button> */}
 						</div>
 					</div>
 				</div>

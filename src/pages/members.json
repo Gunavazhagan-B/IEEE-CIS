@@ -1,0 +1,244 @@
+{
+    "Management": [
+        {
+            "Role": "Chair",
+            "Name": "Swarna Laskshmi B",
+            "LinkedIn ID": "https://www.linkedin.com/in/swarna-lakshmi-b-511314311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "Swarzzz_05",
+            "Github": "https://github.com/Swarna-68",
+            "Photo": "/images/SWARNALAKSHMI B.jpg"
+        },
+        {
+            "Role": "Vice-Chair",
+            "Name": "SURWEESH SP",
+            "LinkedIn ID": "https://www.linkedin.com/in/surweesh-sprabakaran",
+            "Insta ID": "surweeshsprabakaran",
+            "Github": "https://github.com/SurweeshSP",
+            "Photo": "/images/Surweesh.jpg"
+        },
+        {
+            "Role": "Secertary",
+            "Name": "Harish Kumar V",
+            "LinkedIn ID": "https://www.linkedin.com/in/harish-kumar-v",
+            "Insta ID": "NIL",
+            "Github": "https://github.com/Harish-57-AIML-A",
+            "Photo": "/images/HARISH KUMAR V (2).jpg"
+        },
+        {
+            "Role": "HR",
+            "Name": "Mervin Anto Santhosh A",
+            "LinkedIn ID": "https://www.linkedin.com/in/mervin-anto-santhosh-a-b7a4152a2/",
+            "Insta ID": "https://www.instagram.com/mervin_anto_05/",
+            "Github": "https://github.com/MervinAntoSanthosh",
+            "Photo": "/images/MERVIN ANTO SANTHOSH A.jpeg"
+        },
+        {
+            "Role": "Treasurer",
+            "Name": "SajivJess B",
+            "LinkedIn ID": "http://www.linkedin.com/in/sajivjess",
+            "Insta ID": "http://httwww.instagram.com/sajivjess.b.i",
+            "Github": "https://github.com/SajivJess",
+            "Photo": "/images/SAJIV JESS B I.png"
+        }
+    ],
+    "Web Dev": [
+        {
+            "Role": "Web Dev Team",
+            "Name": "Tarun Aanand S G",
+            "LinkedIn ID": "https://www.linkedin.com/in/tarun-aanand-s-g-12092b2a2/",
+            "Insta ID": "tarun_aanand",
+            "Github": "https://github.com/TarunAanand",
+            "Photo": "/images/TARUN AANAND S G.jpg"
+        },
+        {
+            "Role": "Web Dev Team",
+            "Name": "Ashikhashree Karthikeyan",
+            "LinkedIn ID": "https://www.linkedin.com/in/ashikha-shree-175665287/",
+            "Insta ID": "blythe._.wexler",
+            "Github": "https://github.com/Ashikhashree",
+            "Photo": "/images/ASHIKHASHREE.jpg"
+        },
+        {
+            "Role": "Web Dev Team",
+            "Name": "Surya Prajin S",
+            "LinkedIn ID": "https://www.linkedin.com/in/surya-prajin-s-7052112a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "",
+            "Github": "https://github.com/SuryaPrajin",
+            "Photo": "/images/SURYA PRAJIN S.png"
+        },
+        {
+            "Role": "Web Dev Team",
+            "Name": "Gunavazhagan B",
+            "LinkedIn ID": "http://linkedin.com/in/gunavazhagan-b-a779112a2",
+            "Insta ID": "",
+            "Github": "https://github.com/Gunavazhagan-B",
+            "Photo": "/images/GUNAVAZHAGAN B.jpg"
+        }
+    ],
+    "Machine Learning": [
+        {
+            "Role": "ML Head",
+            "Name": "Shriram N",
+            "LinkedIn ID": "https://www.linkedin.com/in/shriram-n-a4a916294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "https://www.instagram.com/nshriram0024?igsh=MTdid2ZzdDFvZGk3Yg==",
+            "Github": "https://github.com/Shriram154",
+            "Photo": "/images/SHRIRAM N.png"
+        },
+        {
+            "Role": "ML Head",
+            "Name": "Shri Dharashini M",
+            "LinkedIn ID": "https://www.linkedin.com/in/shri-dharshini-m",
+            "Insta ID": "dharshhiniii_",
+            "Github": "https://github.com/shridharshinim",
+            "Photo": "/images/SHRI DHARSHINI M.jpg"
+        },
+        {
+            "Role": "ML Senior Associate",
+            "Name": "Sanjay R",
+            "LinkedIn ID": "https://www.linkedin.com/in/sanjay-rox7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "Sanjayrox7",
+            "Github": "https://github.com/Sanjayrox",
+            "Photo": "/images/Sanjay R ml.jpg"
+        }
+    ],
+    "Data Science": [
+        {
+            "Role": "DS Head",
+            "Name": "Sai Sanjay SV",
+            "LinkedIn ID": "https://www.linkedin.com/in/sai-sanjay-b7b4082a2/",
+            "Insta ID": "https://www.instagram.com/___.sxnjxy/",
+            "Github": "https://github.com/sanjaytypes",
+            "Photo": "/images/SAISANJAY S V.jpg"
+        },
+        {
+            "Role": "DS Head",
+            "Name": "Dilip Kannan",
+            "LinkedIn ID": "https://www.linkedin.com/in/dilip-kannan-k-4834182a2",
+            "Insta ID": "https://www.instagram.com/dilipkannan_/",
+            "Github": "https://github.com/DILIP-KANNAN/",
+            "Photo": "/images/Dilip Kannan.jpg"
+        },
+        {
+            "Role": "DS Senior Associate",
+            "Name": "Lokaa V",
+            "LinkedIn ID": "https://www.linkedin.com/in/lokaa-v-0345b42a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "Insta ID": "https://www.instagram.com/lokaa_1910?igsh=MWczMmFyZm85M2xyeA%3D%3D&utm_source=qr",
+            "Github": "NIL",
+            "Photo": "/images/LOKAA VENKATARATHINAM.png"
+        }
+    ],
+    "Computer Vision": [
+        {
+            "Role": "CV Head",
+            "Name": "Lakshiya Sri KM",
+            "LinkedIn ID": "https://www.linkedin.com/in/lakshiya-sri-k-m-ba91772a2/",
+            "Insta ID": "lakshiya_05",
+            "Github": "https://github.com/LAKSHIYA24",
+            "Photo": "/images/LAKSHIYA SRI K M.jpg"
+        },
+        {
+            "Role": "CV Head",
+            "Name": "Prathisha R",
+            "LinkedIn ID": "https://www.linkedin.com/in/prathisha-rammohan-b755b32a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "https://www.instagram.com/prathisha_05?igsh=MTZ4aGs4ODBtMzl5YQ==",
+            "Github": "https://github.com/231501119",
+            "Photo": "/images/PRATHISHA R.jpg"
+        },
+        {
+            "Role": "CV Senior Associate",
+            "Name": "Devesh D",
+            "LinkedIn ID": "http://www.linkedin.com/in/devesh09",
+            "Insta ID": "_itz_me_dev_sh",
+            "Github": "https://github.com/devesh09D",
+            "Photo": "/images/DEVESH D.jpg"
+        }
+    ],
+    "Internet Of Things": [
+        {
+            "Role": "IoT Head",
+            "Name": "Doneeswaran J",
+            "LinkedIn ID": "https://www.linkedin.com/in/doneeswaran-j?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "https://www.instagram.com/j.doneeswaran?igsh=eThlbWpmcHMyaDVu",
+            "Github": "https://github.com/Doneeswaran",
+            "Photo": "/images/Doneeswaran J.jpg"
+        },
+        {
+            "Role": "IoT Head",
+            "Name": "Harish M",
+            "LinkedIn ID": "linkedin.com/in/harishm007",
+            "Insta ID": "",
+            "Github": "git.harishm.tech",
+            "Photo": "/images/HARISH M 2.jpeg"
+        },
+        {
+            "Role": "IoT Senior Associate",
+            "Name": "Umesh Sarathy",
+            "LinkedIn ID": "https://www.linkedin.com/in/umesh-sarathy-s-k-0771122a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "https://www.instagram.com/umeshsarathy_?igsh=MXkyazdsM21vN2hseQ==",
+            "Github": "https://github.com/umeshsarathy",
+            "Photo": "/images/UMESH SARATHY S K.jpg"
+        }
+    ],
+    "Design": [
+        {
+            "Role": "Design Head",
+            "Name": "Gnaanesh BB",
+            "LinkedIn ID": "https://www.linkedin.com/in/gnaanesh-b-b-920401295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "_adventurous_boy_",
+            "Github": "https://github.com/Gnaaneshbb",
+            "Photo": "/images/GNAANESH B B.png"
+        },
+        {
+            "Role": "Design Head",
+            "Name": "Antony Jadrian A",
+            "LinkedIn ID": "https://www.linkedin.com/in/antony-jadrien-a-904001311",
+            "Insta ID": "jadrien_ un_official",
+            "Github": "AntonyJadrien ",
+            "Photo": "/images/ANTONY JADRIEN A .jpg"
+        },
+        {
+            "Role": "Design Senior Associate",
+            "Name": "Vijay R",
+            "LinkedIn ID": "https://www.linkedin.com/in/vijay-r-678a5631b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "https://www.instagram.com/__im__rv?igsh=MTdzdmhpNTQ2Z2RlaA==",
+            "Github": "https://github.com/Vijay-R57",
+            "Photo": "/images/VIJAY_R.jpg"
+        }
+    ],
+    "Event": [
+        {
+            "Role": "Event Head",
+            "Name": "Sathyanath L",
+            "LinkedIn ID": "https://www.linkedin.com/in/sathyanath-l-246b65310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "https://www.instagram.com/its__sakthi_?igsh=ZHl6dmd5eDVzdHB0",
+            "Github": "@Sathyanath-L",
+            "Photo": "/images/SATHYANATH L.jpg"
+        },
+        {
+            "Role": "Event Head",
+            "Name": "Mani Shankar Raju R",
+            "LinkedIn ID": "https://www.linkedin.com/in/mani-shankar-raju-r-6465b12a2",
+            "Insta ID": "https://www.instagram.com/_msr1010_?igsh=cnF1bHI5eDRkdGlj",
+            "Github": "https://github.com/ManiShankarRaju",
+            "Photo": "/images/MANI SHANKAR RAJU R.webp"
+        }
+    ],
+    "Public Realtions": [
+        {
+            "Role": "PR Head",
+            "Name": "Rashmi R",
+            "LinkedIn ID": "https://www.linkedin.com/in/rashmi-r-64b4102a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Insta ID": "https://www.instagram.com/rashh_1802?igsh=bzR1cDg3Z2VvN2Zt",
+            "Github": "https://github.com/RashmiRavikumar1985",
+            "Photo": "/images/RASHMI R.jpg"
+        },
+        {
+            "Role": "PR Head",
+            "Name": "Dejaswini G",
+            "LinkedIn ID": "https://www.linkedin.com/in/dejaswini-b-g-bb220a2a2",
+            "Insta ID": "dejaswini",
+            "Github": "https://github.com/Dejaswini",
+            "Photo": "/images/Deju.jpg"
+        }
+    ]
+}
