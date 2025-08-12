@@ -145,13 +145,9 @@ const AboutPage = ({ onPageChange }: AboutPageProps) => {
 							</CardHeader>
 							<CardContent>
 								<p className="text-lg text-muted-foreground leading-relaxed">
-									To advance the theory, design, and
-									application of biologically and
-									linguistically motivated computational
-									paradigms including neural networks,
-									connectionist systems, genetic algorithms,
-									evolutionary programming, fuzzy systems, and
-									hybrid intelligent systems.
+									Advance the theory, design, and application of biologically and linguistically 
+                  motivated computational paradigms including neural networks, connectionist systems, 
+                  genetic algorithms, evolutionary programming, fuzzy systems, and hybrid intelligent systems.
 								</p>
 							</CardContent>
 						</Card>

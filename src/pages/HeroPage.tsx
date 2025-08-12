@@ -66,31 +66,27 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 
 	const achievements = [
 		{
-			title: "Best Student Chapter Award 2023",
+			title: "Flagship Conferences",
 			description:
-				"Recognized by IEEE for outstanding contributions to computational intelligence research and education.",
-			year: "2023",
+				"Hosts premier events like WCCI, uniting experts in AI and computational intelligence",
 			icon: <Award className="h-6 w-6" />,
-		},
-		{
-			title: "International Workshop Success",
-			description:
-				"Successfully organized an international workshop on AI and Machine Learning with 500+ participants.",
-			year: "2023",
-			icon: <Users className="h-6 w-6" />,
 		},
 		{
 			title: "Research Publications",
 			description:
-				"Our members published 25+ research papers in top-tier IEEE journals and conferences.",
-			year: "2022",
+				"Publishes leading journals and magazines shaping the future of AI",
+			icon: <Users className="h-6 w-6" />,
+		},
+		{
+			title: "Global Competitions",
+			description:
+				"Organizes challenges that inspire innovation and real-world AI solutions.",
 			icon: <Brain className="h-6 w-6" />,
 		},
 		{
-			title: "Industry Partnerships",
+			title: "Education & Mentorship",
 			description:
-				"Established partnerships with leading tech companies for internships and collaborative projects.",
-			year: "2022",
+				"Provides training, webinars, and guidance for skill growth in AI.",
 			icon: <Zap className="h-6 w-6" />,
 		},
 	];
@@ -226,14 +222,14 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 							<div className="relative w-[280px] md:w-[320px] lg:w-[400px]">
 								{/* Placeholder for IEEE logo */}
 								<img
-                                    src="/ieee-logo.svg"
-                                    alt="IEEE Computational Intelligence Society logo"
-                                    width={1200}
-                                    height={600}
-                                    // priority
-                                    className="relative z-10 h-auto w-full [filter:drop-shadow(0_0_22px_rgba(255,255,255,0.55))_drop-shadow(0_0_60px_rgba(255,255,255,0.38))]"
-                                />
-                                </div>
+									src="/ieee-logo.svg"
+									alt="IEEE Computational Intelligence Society logo"
+									width={1200}
+									height={600}
+									// priority
+									className="relative z-10 h-auto w-full [filter:drop-shadow(0_0_22px_rgba(255,255,255,0.55))_drop-shadow(0_0_60px_rgba(255,255,255,0.38))]"
+								/>
+							</div>
 						</div>
 
 						{/* Separator Line */}
@@ -245,16 +241,15 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 						<div className="md:col-span-7 lg:col-span-7">
 							<h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[1.05] tracking-tight drop-shadow-[0_0_24px_rgba(255,255,255,0.25)]">
 								<span className="block">
-									Advancing Intelligence
+									Driving Innovation
 								</span>
 								<span className="block drop-shadow-[0_0_28px_rgba(255,255,255,0.35)]">
-									Through Innovation
+									Empowering Intelligence
 								</span>
 							</h1>
 							<p className="mt-6 text-lg md:text-xl lg:text-2xl leading-relaxed text-white/90 max-w-2xl">
-								Empowering students to push the boundaries of
-								computational intelligence through research,
-								education, and collaboration.
+								Step into the world of Computational
+								Intelligence - Only at REC CIS
 							</p>
 						</div>
 					</div>
@@ -271,26 +266,29 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 							</h2>
 							<p className="text-lg text-muted-foreground leading-relaxed mb-8">
 								The IEEE Computational Intelligence Society
-								(CIS) focuses on computational and theoretical
-								aspects of mimicking nature for problem solving,
-								offering leading research in nature-inspired
-								problem solving, including neural networks,
-								evolutionary algorithms, fuzzy systems, and
-								hybrid intelligent systems.
+								(CIS) is a professional society of the Institute
+								of Electrical and Electronics Engineers is where
+								tech gets smarter. We're all about creating
+								systems that can think, learn, and adapt,
+								inspired by how humans and nature work. From
+								AIML to robotics, IEEE CIS bridges the gap
+								between theory and real-world impact. <br />It's not
+								just a society — it's a community shaping the
+								future, where innovation meets impact.
 							</p>
-							<p className="text-lg text-muted-foreground leading-relaxed mb-8">
+							{/* <p className="text-lg text-muted-foreground leading-relaxed mb-8">
 								Our society is dedicated to advancing the field
 								of artificial intelligence through innovative
 								research, education, and collaboration among
 								students, academics, and industry professionals.
-							</p>
-							<Button
+							</p> */}
+							{/* <Button
 								onClick={() => onPageChange?.("about")}
 								className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 neon-border"
 							>
 								Learn More About Us
 								<ChevronRight className="ml-2 h-4 w-4" />
-							</Button>
+							</Button> */}
 						</div>
 
 						<div className="animate-fade-in-up animate-delay-200">
@@ -340,11 +338,10 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 				<div className="max-w-7xl mx-auto relative z-10">
 					<div className="text-center mb-16 animate-fade-in-up">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow-cream">
-							Our Achievements
+							Highlights
 						</h2>
 						<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-							Celebrating our milestones and contributions to the
-							field of computational intelligence.
+							Hub of Dreamers, Doers and Disruptors
 						</p>
 					</div>
 
@@ -382,6 +379,7 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 			</section>
 
 			{/* Global Impact Section */}
+
 			<section className="py-24 glass-intense px-4 relative overflow-hidden">
 				<div className="absolute inset-0 gradient-purple-glow opacity-10"></div>
 				<div className="max-w-7xl mx-auto text-center relative z-10">
@@ -389,16 +387,11 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 						Global Impact
 					</h2>
 					<p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-100">
-						IEEE CIS spans the globe with over 6,000 members
-						worldwide, fostering collaboration between academia and
-						industry to advance computational intelligence research
-						and applications.
+						Over 486,000 members across continents, IEEE CIS is a powerhouse connecting brilliant minds from universities, research labs, and industry leaders to push the boundaries of computational intelligence.
 					</p>
 					<p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
-						Our society publishes leading journals, organizes
-						premier conferences, and supports educational
-						initiatives that shape the future of artificial
-						intelligence and machine learning.
+						We drive the future of AI and machine learning through world-class journals, game-changing conferences, and 
+            forward-thinking educational programs — turning today's ideas into tomorrow's breakthroughs.
 					</p>
 				</div>
 			</section>
@@ -449,38 +442,16 @@ const HeroPage = ({ onPageChange }: HeroPageProps) => {
 				<div className="max-w-4xl mx-auto text-center">
 					<div className="gradient-dark-purple text-cream py-16 px-8 rounded-2xl glow-purple-intense glass-intense shadow-deep animate-fade-in-up">
 						<h2 className="text-4xl md:text-5xl font-bold mb-8 text-glow-cream">
-							Connect With Us
+							Your Future in AI Starts Here.
 						</h2>
 						<p className="text-xl mb-12 text-cream/90 leading-relaxed max-w-2xl mx-auto">
-							Ready to be part of our innovative community?
-							Contact us to learn more about membership
-							opportunities and start your journey with
-							computational intelligence.
+							Connect with like-minded innovators, access cutting-edge resources, 
+            and be part of groundbreaking research in computational intelligence.
 						</p>
-						<div className="grid md:grid-cols-3 gap-8 text-center">
-							<div className="p-6 glass rounded-lg hover-glow transition-all duration-300">
-								<h3 className="font-semibold mb-3 text-lg text-glow-cream">
-									📧 Email
-								</h3>
-								<p className="text-cream/80">
-									ieee.cis@rec.edu
-								</p>
-							</div>
-							<div className="p-6 glass rounded-lg hover-glow transition-all duration-300">
-								<h3 className="font-semibold mb-3 text-lg text-glow-cream">
-									🔗 LinkedIn
-								</h3>
-								<p className="text-cream/80">
-									/company/ieee-cis-rec
-								</p>
-							</div>
-							<div className="p-6 glass rounded-lg hover-glow transition-all duration-300">
-								<h3 className="font-semibold mb-3 text-lg text-glow-cream">
-									📱 Instagram
-								</h3>
-								<p className="text-cream/80">@ieee_cis_rec</p>
-							</div>
-						</div>
+						<p className="text-xl mb-12 text-cream/90 leading-relaxed max-w-2xl mx-auto">
+							Join workshops, participate in global competitions, and collaborate with experts shaping the future of AI.
+Expand your skills, grow your network, and make a lasting impact on technology for humanity
+						</p>
 					</div>
 				</div>
 			</section>

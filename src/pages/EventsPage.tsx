@@ -400,15 +400,15 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 							latest updates.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-							<Button className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 neon-border px-8 py-3 text-lg">
+							<a className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 neon-border px-8 py-3 text-lg " href="https://cis.ieee.org/publications/newsletter">
 								Subscribe to Newsletter
-							</Button>
-							<Button
+							</a>
+							{/* <Button
 								variant="outline"
 								className="border-accent/30 text-accent hover:bg-accent/10 transition-all duration-300 hover:scale-105 px-8 py-3 text-lg"
 							>
 								Follow Us
-							</Button>
+							</Button> */}
 						</div>
 					</div>
 				</div>
