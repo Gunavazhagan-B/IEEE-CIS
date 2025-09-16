@@ -1,18 +1,10 @@
 [
-  {
-    "id": 1754143705492,
-    "title": "AI Workshop Series 2",
-    "description": "Comprehensive workshop on machine learning fundamentals and neural networks",
-    "image": "llm_tuned.png",
-    "link": "https://example.com/register/ai-workshop",
-    "type": "Workshop"
-  },
-  {
-    "id": 1754149231551,
-    "title": "Data Science Bootcamp",
-    "description": "Intensive bootcamp covering data analysis, visualization, and predictive modeling",
-    "image": "rewired.png",
-    "link": "https://example.com/register/data-science",
-    "type": "Workshop"
-  }
+    {
+        "id": 3,
+        "title": "SIH 2025 Pre-Event: The Winners Playbook ",
+        "description": "Details:\n 📅 Date: 17th September\n 🕒 Time: 7.30-9.00PM\n 📍 Venue: Online\n🎤 Featuring SIH 2024 Champions – Software & Hardware Tracks\n 💡 Learn how to pitch, prototype & win like a pro!\n",
+        "image": "sih.jpg",
+        "link": "https://docs.google.com/forms/d/e/1FAIpQLScOEtkEOBxqyH9TP7l-wIRiD93e4Exyi5WnIzkuf2PrtptKPQ/viewform",
+        "type": "Webinar"
+    }
 ]

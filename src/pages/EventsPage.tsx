@@ -13,7 +13,6 @@ import { Calendar, Users, Clock, Zap } from "lucide-react";
 import type { PastEvent } from "../types";
 import { PastEvents } from "../components/PastEvents";
 
-
 interface Event {
 	id: number;
 	title: string;
@@ -68,7 +67,10 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 		null
 	);
 	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(null);
+    
+    const [openIds, setOpenIds] = useState(new Set());
+	// const [openEventId, setOpenEventId] = useState<number | null>(null);
 
 	const filteredEvents = useMemo(() => {
 		if (!selectedCategory) return events;
@@ -120,7 +122,17 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 			}
 		};
 		fetchPastEvents();
-	}, []);
+    }, []);
+    
+    const toggleOpen = (id: unknown) => {
+		setOpenIds((prev) => {
+			const next = new Set(prev);
+			if (next.has(id)) next.delete(id);
+			else next.add(id);
+			return next;
+		});
+	};
+
 
 	// Delete event (API only - no local fallback)
 	const handleDeleteEvent = async (eventId: number) => {
@@ -296,7 +308,7 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 								className="glass-intense border-accent/20 shadow-deep transition-all duration-500 hover:scale-105 hover-glow animate-fade-in-up"
 								style={{ animationDelay: `${index * 0.1}s` }}
 							>
-								<CardContent className="p-6">
+								{/* <CardContent className="p-6">
 									<div className="aspect-video bg-gradient-to-br from-purple-900/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
 										{event.image ? (
 											<img
@@ -329,9 +341,16 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 										<h3 className="text-xl font-semibold text-glow-cream">
 											{event.title}
 										</h3>
-										<p className="text-muted-foreground text-sm leading-relaxed">
-											{event.description}
-										</p>
+                                        {event.description
+                                            .split("\n")
+                                            .map((line, i) => (
+                                                <p
+                                                    key={i}
+                                                    className="text-muted-foreground text-sm leading-relaxed"
+                                                >
+                                                    {line}
+                                                </p>
+                                            ))}
 
 										<div className="flex justify-between items-center pt-4">
 											{isAdmin && (
@@ -358,6 +377,113 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 											>
 												Register Now
 											</Button>
+										</div>
+									</div>
+								</CardContent> */}
+								<CardContent className="p-6">
+									<div className="md:grid md:grid-cols-[max-content_1fr] gap-6 items-start">
+										{/* Poster column: made a bit narrower so text gets more room */}
+										<div className="flex items-start">
+											{event.image ? (
+												<img
+													src={event.image}
+													alt={event.title}
+													// narrower widths to give text column more space; h-auto preserves aspect ratio
+													className="w-24 md:w-28 lg:w-32 h-auto max-h-[420px] object-contain rounded-lg shadow-sm"
+													loading="lazy"
+												/>
+											) : (
+												<div className="w-16 h-16 gradient-purple-glow rounded-full flex items-center justify-center glow-purple">
+													<Calendar className="h-8 w-8 text-primary-foreground" />
+												</div>
+											)}
+										</div>
+
+										{/* Text + Button column */}
+										<div className="flex-1 space-y-3 flex flex-col justify-between">
+											<div>
+												<div className="flex items-center justify-between">
+													<Badge
+														variant="secondary"
+														className="bg-accent/20 text-accent"
+													>
+														{event.type}
+													</Badge>
+												</div>
+
+												<h3 className="text-xl font-semibold text-glow-cream">
+													{event.title}
+												</h3>
+
+												{/* DETAILS toggle (no preview) */}
+												<div className="mt-2">
+													<button
+														type="button"
+														onClick={() =>
+															toggleOpen(event.id)
+														}
+														aria-expanded={openIds.has(
+															event.id
+														)}
+														aria-controls={`desc-${event.id}`}
+														className="text-sm font-medium underline underline-offset-2 text-accent/90 flex items-center gap-2"
+													>
+														{openIds.has(event.id)
+															? "Hide details"
+															: "Details"}
+													</button>
+
+													{/* Collapsible description */}
+													<div
+														id={`desc-${event.id}`}
+														className={`mt-3 overflow-hidden transition-all duration-300 ${
+															openIds.has(
+																event.id
+															)
+																? "max-h-[999px] opacity-100"
+																: "max-h-0 opacity-0"
+														}`}
+													>
+														{event.description
+															.split("\n")
+															.map((line, i) => (
+																<p
+																	key={i}
+																	className="text-muted-foreground text-sm leading-relaxed"
+																>
+																	{line}
+																</p>
+															))}
+													</div>
+												</div>
+											</div>
+
+											<div className="flex justify-between items-center pt-4">
+												{isAdmin && (
+													<Button
+														variant="destructive"
+														size="sm"
+														onClick={() =>
+															handleDeleteEvent(
+																event.id
+															)
+														}
+													>
+														Delete
+													</Button>
+												)}
+												<Button
+													className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 ml-auto"
+													onClick={() =>
+														window.open(
+															event.link,
+															"_blank"
+														)
+													}
+												>
+													Register Now
+												</Button>
+											</div>
 										</div>
 									</div>
 								</CardContent>
@@ -400,7 +526,10 @@ const EventsPage = ({ isAdmin }: EventsPageProps) => {
 							latest updates.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-							<a className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 neon-border px-8 py-3 text-lg " href="https://cis.ieee.org/publications/newsletter">
+							<a
+								className="gradient-purple-glow hover:glow-purple-intense transition-all duration-300 hover:scale-105 neon-border px-8 py-3 text-lg "
+								href="https://cis.ieee.org/publications/newsletter"
+							>
 								Subscribe to Newsletter
 							</a>
 							{/* <Button
